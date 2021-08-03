@@ -65,6 +65,7 @@ function draw() {
       jungle.x=500;
     }
     if(keyDown('space') && kangaroo.y>150){
+      jumpSound.play();
       kangaroo.velocityY=-16;
 
     }
@@ -82,6 +83,7 @@ function draw() {
       shrubsGroup.destroyEach();
     }
     if(obstaclesGroup.isTouching(kangaroo)){
+      collidedSound.play();
       gameState=END;
     }
 
